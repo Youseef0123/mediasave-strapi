@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job Position",
+    "description": "Pharmaceutical Job Openings at Medisave"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "Sales & Marketing",
+        "R&D",
+        "Quality Assurance",
+        "Regulatory Affairs",
+        "Clinical Research",
+        "Digital Marketing",
+        "Other"
+      ],
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Full-time",
+        "Part-time",
+        "Internship",
+        "Contract"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "responsibilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "requirements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "isOpen": {
+      "type": "boolean",
+      "default": true
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-application.job-application",
+      "mappedBy": "job"
+    }
+  }
+}
