@@ -65,6 +65,10 @@
       "type": "boolean",
       "default": true
     },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
     "displayOrder": {
       "type": "integer",
       "default": 0
