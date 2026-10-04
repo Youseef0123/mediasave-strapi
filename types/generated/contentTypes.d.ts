@@ -490,7 +490,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['Celebration', 'Conference', 'Exhibition', 'Partnership']
+      ['Cycle Meeting', 'Group Meeting', 'Standalone', 'Conference']
     > &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;

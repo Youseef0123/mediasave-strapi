@@ -34,10 +34,10 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "Celebration",
-        "Conference",
-        "Exhibition",
-        "Partnership"
+        "Cycle Meeting",
+        "Group Meeting",
+        "Standalone",
+        "Conference"
       ],
       "required": true
     },
