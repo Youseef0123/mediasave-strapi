@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event & News",
+    "description": "Corporate events and news shown on the Events & News page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Celebration",
+        "Conference",
+        "Exhibition",
+        "Partnership"
+      ],
+      "required": true
+    },
+    "eventDate": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "displayOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
