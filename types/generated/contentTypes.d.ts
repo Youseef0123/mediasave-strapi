@@ -584,7 +584,7 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
       ]
     > &
       Schema.Attribute.Required;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
     isOpen: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::job.job'> &

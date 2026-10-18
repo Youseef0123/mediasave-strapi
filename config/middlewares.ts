@@ -7,7 +7,13 @@ const config: Core.Config.Middlewares = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://medisavepharma.com', 'https://www.medisavepharma.com'],
+      origin: [
+        'https://medisavepharma.com',
+        'https://www.medisavepharma.com',
+        // Local frontend dev server
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
+      ],
     },
   },
   'strapi::poweredBy',

@@ -49,7 +49,7 @@
       "required": true
     },
     "description": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     },
     "responsibilities": {
